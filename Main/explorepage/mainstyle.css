@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'San Francisco', Helvetica, Arial, sans-serif;
+}
+
+body {
+    background-color: #ffffff;
+}
+
+.dynamic-navbar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.island {
+    background-color: #a8a8a8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: transform 0.3s ease, padding 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1000px;
+}
+
+.island:hover {
+    transform: scale(1.05);
+    padding: 15px 30px;
+}
+
+.search-input {
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    transition: width 0.3s ease;
+    width: 120px;
+}
+
+.search-input::placeholder {
+    color: #e0e0e0;
+}
+
+.search-icon {
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.island a {
+    background: white;
+    color: black;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    flex: 1;
+    min-width: 100px;
+    max-width: 150px;
+    text-decoration: none;
+}
+
+.island a:hover {
+    background-color: #1d7dff;
+    color: white;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.island a.active {
+    background-color: #1d7dff;
+    color: white;
+    text-decoration: none;
+}
+
+.island a:last-child {
+    background: #1d7dff;
+    color: white;
+    text-decoration: none;
+}
+
+.island a:last-child:hover {
+    background-color: #1b6de0;
+    transform: scale(1.1);
+    text-decoration: none;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.card {
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    position: relative;
+}
+
+.card img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+.card-footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -3px 10px rgba(0, 0, 0, 0.3);
+
+}
+
+.star {
+    color: gold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.divider {
+    border: none;
+    height: 2px;
+    background-color: #ccc;
+    margin: 20px 0;
+}
+
+.filter-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0px 20px;
+}
+
+.filter-button {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    max-width: 100px;
+    min-width: 80px;
+}
+
+.filter-icon {
+    font-size: 30px;
+    color: #1d1d1d;
+    margin-bottom: 5px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.filter-text {
+    font-size: 14px;
+    color: #1d1d1d;
+    font-weight: 500;
+}
+
+.filter-button:hover .filter-icon {
+    transform: scale(1.2);
+    color: #1d7dff;
+}
+
+.filter-button:hover .filter-text {
+    color: #1d7dff;
+}
+
+@media (max-width: 768px) {
+    .island {
+        flex-direction: column;
+        padding: 10px 15px;
+    }
+
+    .island a {
+        width: 100%;
+        max-width: none;
+    }
+
+    .search-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
