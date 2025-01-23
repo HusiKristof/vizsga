@@ -1,0 +1,67 @@
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://www.abony.hu/media/k2/items/cache/171fc14b49a79ea979710de5b3402b30_XL.jpg') center/cover no-repeat;
+    color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.hero-content .btn {
+    font-size: 1.2rem;
+    padding: 10px 30px;
+}
+
+.features-section {
+    padding: 60px 20px;
+    background-color: #f8f9fa;
+}
+
+.feature {
+    margin-bottom: 30px;
+}
+
+.feature i {
+    color: #1d7dff;
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+a {
+    background: #1d7dff;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-align: center;
+    display: inline-block;
+    text-decoration: none;
+    scale: 1.5;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+    transform: scale(1.1);
+    text-decoration: none;
+}
